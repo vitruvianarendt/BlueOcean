@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("vitruvianarendt/kiii-jenkins")
+       app = docker.build("vitruvianarendt/BlueOcean")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
